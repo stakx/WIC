@@ -71,13 +71,13 @@ namespace stakx.WIC.Interop
             [Out] out IWICBitmap ppIBitmap);
 
         unsafe void CreateBitmapFromMemory(
-                [In] int uiWidth,
-                [In] int uiHeight,
-                [In] Guid pixelFormat,
-                [In] int cbStride,
-                [In] int cbBufferSize,
-                [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 4)] byte* pbBuffer,
-                [Out] out IWICBitmap ppIBitmap);
+            [In] int uiWidth,
+            [In] int uiHeight,
+            [In] Guid pixelFormat,
+            [In] int cbStride,
+            [In] int cbBufferSize,
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 4)] byte* pbBuffer,
+            [Out] out IWICBitmap ppIBitmap);
 
         void CreateBitmapFromHBITMAP(
             [In] IntPtr hBitmap,
