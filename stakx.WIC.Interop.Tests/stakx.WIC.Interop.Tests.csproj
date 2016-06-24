@@ -65,6 +65,7 @@
     <ProjectReference Include="..\stakx.WIC.Interop\stakx.WIC.Interop.csproj">
       <Project>{4ba81f6a-1d58-4c96-b603-8603324ac11c}</Project>
       <Name>stakx.WIC.Interop</Name>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
