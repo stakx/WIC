@@ -26,6 +26,6 @@ namespace stakx.WIC.Interop
             [In] WICRect* prc,
             [In] int cbStride,
             [In] int cbBufferSize,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte* pbBuffer);
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte* pbBuffer);
     }
 }

@@ -17,7 +17,7 @@ namespace stakx.WIC.Interop
 
         unsafe void GetDataPointer(
             [Out] out int pcbBufferSize,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 0)] byte* ppbData);
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 0)] out byte* ppbData);
 
         void GetPixelFormat(
             [Out] out Guid pPixelFormat);
