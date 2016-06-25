@@ -55,10 +55,12 @@
     <Compile Include="Enumerations\WICBitmapLockFlags.cs" />
     <Compile Include="Enumerations\WICBitmapPaletteType.cs" />
     <Compile Include="Enumerations\WICColorContextType.cs" />
+    <Compile Include="Enumerations\WICComponentEnumerateOptions.cs" />
     <Compile Include="Enumerations\WICComponentSigning.cs" />
     <Compile Include="Enumerations\WICComponentType.cs" />
     <Compile Include="Enumerations\WICDecodeOptions.cs" />
     <Compile Include="Interfaces\IEnumString.cs" />
+    <Compile Include="Interfaces\IEnumUnknown.cs" />
     <Compile Include="Interfaces\IID.cs" />
     <Compile Include="Interfaces\IPropertyBag2.cs" />
     <Compile Include="Interfaces\ISequentialStream.cs" />

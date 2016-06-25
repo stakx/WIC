@@ -104,8 +104,10 @@ namespace stakx.WIC.Interop
             [In] IntPtr hIcon,
             [Out] out IWICBitmap ppIBitmap);
 
-        #warning `IWICImagingFactory.CreateComponentEnumerator` is incomplete.
-        void CreateComponentEnumerator();
+        void CreateComponentEnumerator(
+            [In] WICComponentType componentTypes,
+            [In] WICComponentEnumerateOptions options,
+            [Out] out IEnumUnknown ppIEnumUnknown);
 
         #warning `IWICImagingFactory.CreateFastMetadataEncoderFromDecoder` is incomplete.
         void CreateFastMetadataEncoderFromDecoder();

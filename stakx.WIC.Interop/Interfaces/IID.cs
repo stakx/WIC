@@ -3,6 +3,7 @@
     internal static class IID
     {
         public const string IEnumString = "00000101-0000-0000-c000-000000000046";
+        public const string IEnumUnknown = "00000100-0000-0000-c000-000000000046";
         public const string IPropertyBag2 = "22f55882-280b-11d0-a8a9-00a0c90c2004";
         public const string ISequentialStream = "0c733a30-2a1c-11ce-ade5-00aa0044773d";
         public const string IStream = "0000000c-0000-0000-c000-000000000046";
