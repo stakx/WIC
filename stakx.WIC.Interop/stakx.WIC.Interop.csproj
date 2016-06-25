@@ -88,6 +88,7 @@
     <Compile Include="Interfaces\IWICFormatConverter.cs" />
     <Compile Include="Interfaces\IWICFormatConverterInfo.cs" />
     <Compile Include="Interfaces\IWICImagingFactory.cs" />
+    <Compile Include="Interfaces\IWICImagingFactorySafe.cs" />
     <Compile Include="Interfaces\IWICMetadataQueryReader.cs" />
     <Compile Include="Interfaces\IWICMetadataQueryWriter.cs" />
     <Compile Include="Interfaces\IWICPalette.cs" />
