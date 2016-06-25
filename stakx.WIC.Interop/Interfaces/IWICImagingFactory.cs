@@ -47,8 +47,8 @@ namespace stakx.WIC.Interop
         void CreateFormatConverter(
             [Out] out IWICFormatConverter ppIFormatConverter);
 
-        #warning `IWICImagingFactory.CreateBitmapScaler` is incomplete.
-        void CreateBitmapScaler();
+        void CreateBitmapScaler(
+            [Out] out IWICBitmapScaler ppIBitmapScaler);
 
         #warning `IWICImagingFactory.CreateBitmapClipper` is incomplete.
         void CreateBitmapClipper();

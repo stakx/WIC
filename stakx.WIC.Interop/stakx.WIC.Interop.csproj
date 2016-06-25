@@ -53,6 +53,7 @@
     <Compile Include="Enumerations\WICBitmapCreateCacheOption.cs" />
     <Compile Include="Enumerations\WICBitmapDecoderCapabilities.cs" />
     <Compile Include="Enumerations\WICBitmapDitherType.cs" />
+    <Compile Include="Enumerations\WICBitmapInterpolationMode.cs" />
     <Compile Include="Enumerations\WICBitmapLockFlags.cs" />
     <Compile Include="Enumerations\WICBitmapPaletteType.cs" />
     <Compile Include="Enumerations\WICColorContextType.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Interfaces\IWICBitmapFrameDecode.cs" />
     <Compile Include="Interfaces\IWICBitmapFrameEncode.cs" />
     <Compile Include="Interfaces\IWICBitmapLock.cs" />
+    <Compile Include="Interfaces\IWICBitmapScaler.cs" />
     <Compile Include="Interfaces\IWICBitmapSource.cs" />
     <Compile Include="Interfaces\IWICColorContext.cs" />
     <Compile Include="Interfaces\IWICColorTransform.cs" />

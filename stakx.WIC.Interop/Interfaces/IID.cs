@@ -16,6 +16,7 @@
         public const string IWICBitmapFrameDecode = "3b16811b-6a43-4ec9-a813-3d930c13b940";
         public const string IWICBitmapFrameEncode = "00000105-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICBitmapLock = "00000123-a8f2-4877-ba0a-fd2b6645fb94";
+        public const string IWICBitmapScaler = "00000302-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICBitmapSource = "00000120-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICColorContext = "3c613a02-34b2-44ea-9a7c-45aea9c6fd6d";
         public const string IWICColorTransform = "b66f034f-d0e2-40ab-b436-6de39e321a94";
