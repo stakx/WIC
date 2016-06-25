@@ -8,20 +8,33 @@ namespace stakx.WIC.Interop
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public unsafe interface IWICImagingFactory
     {
-        #warning `IWICImagingFactory.CreateDecoderFromFilename` is incomplete.
-        void CreateDecoderFromFilename();
+        unsafe void CreateDecoderFromFilename(
+            [In, MarshalAs(UnmanagedType.LPWStr)] string wzFilename,
+            [In] Guid* pguidVendor,
+            [In] StreamAccessMode dwDesiredAccess,
+            [In] WICDecodeOptions metadataOptions,
+            [Out] out IWICBitmapDecoder ppIDecoder);
 
-        #warning `IWICImagingFactory.CreateDecoderFromStream` is incomplete.
-        void CreateDecoderFromStream();
+        unsafe void CreateDecoderFromStream(
+            [In] IStream pIStream,
+            [In] Guid* pguidVendor,
+            [In] WICDecodeOptions metadataOptions,
+            [Out] out IWICBitmapDecoder ppIDecoder);
 
-        #warning `IWICImagingFactory.CreateDecoderFromFileHandle` is incomplete.
-        void CreateDecoderFromFileHandle();
+        unsafe void CreateDecoderFromFileHandle(
+            [In] IntPtr hFile,
+            [In] Guid* pguidVendor,
+            [In] WICDecodeOptions metadataOptions,
+            [Out] out IWICBitmapDecoder ppIDecoder);
 
-        #warning `IWICImagingFactory.CreateComponentInfo` is incomplete.
-        void CreateComponentInfo();
+        void CreateComponentInfo(
+            [In] Guid clsidComponent,
+            [Out] out IWICComponentInfo ppIInfo);
 
-        #warning `IWICImagingFactory.CreateDecoder` is incomplete.
-        void CreateDecoder();
+        unsafe void CreateDecoder(
+            [In] Guid guidContainerFormat,
+            [In] Guid* pguidVendor,
+            [Out] out IWICBitmapDecoder ppIDecoder);
 
         #warning `IWICImagingFactory.CreateEncoder` is incomplete.
         void CreateEncoder();
@@ -44,8 +57,8 @@ namespace stakx.WIC.Interop
         void CreateStream(
             [Out] out IWICStream ppIWICStream);
 
-        #warning `IWICImagingFactory.CreateColorContext` is incomplete.
-        void CreateColorContext();
+        void CreateColorContext(
+            [Out] out IWICColorContext ppIWICColorContext);
 
         #warning `IWICImagingFactory.CreateColorTransformer` is incomplete.
         void CreateColorTransformer();
