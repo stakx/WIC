@@ -85,13 +85,17 @@
     <Compile Include="Interfaces\IWICColorContext.cs" />
     <Compile Include="Interfaces\IWICColorTransform.cs" />
     <Compile Include="Interfaces\IWICComponentInfo.cs" />
+    <Compile Include="Interfaces\IWICEnumMetadataItem.cs" />
     <Compile Include="Interfaces\IWICFastMetadataEncoder.cs" />
     <Compile Include="Interfaces\IWICFormatConverter.cs" />
     <Compile Include="Interfaces\IWICFormatConverterInfo.cs" />
     <Compile Include="Interfaces\IWICImagingFactory.cs" />
     <Compile Include="Interfaces\IWICImagingFactorySafe.cs" />
+    <Compile Include="Interfaces\IWICMetadataBlockReader.cs" />
+    <Compile Include="Interfaces\IWICMetadataHandlerInfo.cs" />
     <Compile Include="Interfaces\IWICMetadataQueryReader.cs" />
     <Compile Include="Interfaces\IWICMetadataQueryWriter.cs" />
+    <Compile Include="Interfaces\IWICMetadataReader.cs" />
     <Compile Include="Interfaces\IWICPalette.cs" />
     <Compile Include="Interfaces\IWICStream.cs" />
     <Compile Include="Enumerations\STATFLAG.cs" />
