@@ -62,8 +62,8 @@ namespace stakx.WIC.Interop
         void CreateColorContext(
             [Out] out IWICColorContext ppIWICColorContext);
 
-        #warning `IWICImagingFactory.CreateColorTransformer` is incomplete.
-        void CreateColorTransformer();
+        void CreateColorTransformer(
+            [Out] out IWICColorTransform ppIWICColorTransform);
 
         void CreateBitmap(
             [In] int uiWidth,

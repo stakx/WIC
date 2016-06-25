@@ -18,6 +18,7 @@
         public const string IWICBitmapLock = "00000123-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICBitmapSource = "00000120-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICColorContext = "3c613a02-34b2-44ea-9a7c-45aea9c6fd6d";
+        public const string IWICColorTransform = "b66f034f-d0e2-40ab-b436-6de39e321a94";
         public const string IWICComponentInfo = "23bc3f0a-698b-4357-886b-f24d50671334";
         public const string IWICFastMetadataEncoder = "b84e2c09-78c9-4ac4-8bd3-524ae1663a2f";
         public const string IWICFormatConverter = "00000301-a8f2-4877-ba0a-fd2b6645fb94";
