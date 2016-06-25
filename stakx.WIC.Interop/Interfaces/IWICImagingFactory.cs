@@ -41,8 +41,8 @@ namespace stakx.WIC.Interop
         #warning `IWICImagingFactory.CreateBitmapFlipRotator` is incomplete.
         void CreateBitmapFlipRotator();
 
-        #warning `IWICImagingFactory.CreateStream` is incomplete.
-        void CreateStream();
+        void CreateStream(
+            [Out] out IWICStream ppIWICStream);
 
         #warning `IWICImagingFactory.CreateColorContext` is incomplete.
         void CreateColorContext();

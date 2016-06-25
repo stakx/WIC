@@ -43,17 +43,27 @@
     </Compile>
     <Compile Include="Classes\CLSID.cs" />
     <Compile Include="Classes\WICImagingFactory.cs" />
+    <Compile Include="Enumerations\LOCKTYPE.cs" />
+    <Compile Include="Enumerations\STGC.cs" />
+    <Compile Include="Enumerations\STGTY.cs" />
+    <Compile Include="Enumerations\StreamAccessMode.cs" />
+    <Compile Include="Enumerations\STREAM_SEEK.cs" />
     <Compile Include="Enumerations\WICBitmapAlphaChannelOption.cs" />
     <Compile Include="Enumerations\WICBitmapCreateCacheOption.cs" />
     <Compile Include="Enumerations\WICBitmapLockFlags.cs" />
     <Compile Include="Enumerations\WICBitmapPaletteType.cs" />
     <Compile Include="Interfaces\IID.cs" />
+    <Compile Include="Interfaces\ISequentialStream.cs" />
+    <Compile Include="Interfaces\IStream.cs" />
     <Compile Include="Interfaces\IWICBitmap.cs" />
     <Compile Include="Interfaces\IWICBitmapLock.cs" />
     <Compile Include="Interfaces\IWICBitmapSource.cs" />
     <Compile Include="Interfaces\IWICImagingFactory.cs" />
     <Compile Include="Interfaces\IWICPalette.cs" />
+    <Compile Include="Interfaces\IWICStream.cs" />
+    <Compile Include="Enumerations\STATFLAG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structures\STATSTG.cs" />
     <Compile Include="Structures\WICRect.cs" />
   </ItemGroup>
   <ItemGroup />
