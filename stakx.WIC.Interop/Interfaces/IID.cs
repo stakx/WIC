@@ -13,6 +13,7 @@
         public const string IWICBitmapDecoderInfo = "d8cd007f-d08f-4191-9bfc-236ea7f0e4b5";
         public const string IWICBitmapEncoder = "00000103-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICBitmapEncoderInfo = "94c9b4ee-a09f-4f92-8a1e-4a9bce7e76fb";
+        public const string IWICBitmapFlipRotator = "5009834f-2d6a-41ce-9e1b-17c5aff7a782";
         public const string IWICBitmapFrameDecode = "3b16811b-6a43-4ec9-a813-3d930c13b940";
         public const string IWICBitmapFrameEncode = "00000105-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICBitmapLock = "00000123-a8f2-4877-ba0a-fd2b6645fb94";
