@@ -36,8 +36,10 @@ namespace stakx.WIC.Interop
             [In] Guid* pguidVendor,
             [Out] out IWICBitmapDecoder ppIDecoder);
 
-        #warning `IWICImagingFactory.CreateEncoder` is incomplete.
-        void CreateEncoder();
+        unsafe void CreateEncoder(
+            [In] Guid guidContainerFormat,
+            [In] Guid* pguidVendor,
+            [Out] out IWICBitmapEncoder ppIEncoder);
 
         void CreatePalette(
             [Out] out IWICPalette ppIPalette);
@@ -111,10 +113,14 @@ namespace stakx.WIC.Interop
         #warning `IWICImagingFactory.CreateFastMetadataEncoderFromFrameDecode` is incomplete.
         void CreateFastMetadataEncoderFromFrameDecode();
 
-        #warning `IWICImagingFactory.CreateQueryWriter` is incomplete.
-        void CreateQueryWriter();
+        unsafe void CreateQueryWriter(
+            [In] Guid guidMetadataFormat,
+            [In] Guid* pguidVendor,
+            [Out] out IWICMetadataQueryWriter ppIQueryWriter);
 
-        #warning `IWICImagingFactory.CreateQueryWriterFromReader` is incomplete.
-        void CreateQueryWriterFromReader();
+        unsafe void CreateQueryWriterFromReader(
+            [In] IWICMetadataQueryReader pIQueryReader,
+            [In] Guid* pguidVendor,
+            [Out] out IWICMetadataQueryWriter ppIQueryWriter);
     }
 }
