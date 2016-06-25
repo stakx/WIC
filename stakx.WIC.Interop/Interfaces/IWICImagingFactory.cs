@@ -109,11 +109,13 @@ namespace stakx.WIC.Interop
             [In] WICComponentEnumerateOptions options,
             [Out] out IEnumUnknown ppIEnumUnknown);
 
-        #warning `IWICImagingFactory.CreateFastMetadataEncoderFromDecoder` is incomplete.
-        void CreateFastMetadataEncoderFromDecoder();
+        void CreateFastMetadataEncoderFromDecoder(
+            [In] IWICBitmapDecoder pIDecoder,
+            [Out] out IWICFastMetadataEncoder ppIFastEncoder);
 
-        #warning `IWICImagingFactory.CreateFastMetadataEncoderFromFrameDecode` is incomplete.
-        void CreateFastMetadataEncoderFromFrameDecode();
+        void CreateFastMetadataEncoderFromFrameDecode(
+            [In] IWICBitmapFrameDecode pIFrameDecoder,
+            [Out] out IWICFastMetadataEncoder ppIFastEncoder);
 
         unsafe void CreateQueryWriter(
             [In] Guid guidMetadataFormat,
