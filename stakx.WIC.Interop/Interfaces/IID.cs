@@ -8,6 +8,7 @@
         public const string ISequentialStream = "0c733a30-2a1c-11ce-ade5-00aa0044773d";
         public const string IStream = "0000000c-0000-0000-c000-000000000046";
         public const string IWICBitmap = "00000121-a8f2-4877-ba0a-fd2b6645fb94";
+        public const string IWICBitmapClipper = "e4fbcf03-223d-4e81-9333-d635556dd1b5";
         public const string IWICBitmapCodecInfo = "e87a44c4-b76e-4c47-8b09-298eb12a2714";
         public const string IWICBitmapDecoder = "9edde9e7-8dee-47ea-99df-e6faf2ed44bf";
         public const string IWICBitmapDecoderInfo = "d8cd007f-d08f-4191-9bfc-236ea7f0e4b5";

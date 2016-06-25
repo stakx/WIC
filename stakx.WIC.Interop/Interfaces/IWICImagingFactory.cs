@@ -50,8 +50,8 @@ namespace stakx.WIC.Interop
         void CreateBitmapScaler(
             [Out] out IWICBitmapScaler ppIBitmapScaler);
 
-        #warning `IWICImagingFactory.CreateBitmapClipper` is incomplete.
-        void CreateBitmapClipper();
+        void CreateBitmapClipper(
+            [Out] out IWICBitmapClipper ppIBitmapClipper);
 
         void CreateBitmapFlipRotator(
             [Out] out IWICBitmapFlipRotator ppIBitmapFlipRotator);

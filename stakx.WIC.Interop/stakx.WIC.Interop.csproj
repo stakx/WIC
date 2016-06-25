@@ -74,6 +74,7 @@
     <Compile Include="Interfaces\IWICBitmapDecoderInfo.cs" />
     <Compile Include="Interfaces\IWICBitmapEncoder.cs" />
     <Compile Include="Interfaces\IWICBitmapEncoderInfo.cs" />
+    <Compile Include="Interfaces\IWICBitmapClipper.cs" />
     <Compile Include="Interfaces\IWICBitmapFlipRotator.cs" />
     <Compile Include="Interfaces\IWICBitmapFrameDecode.cs" />
     <Compile Include="Interfaces\IWICBitmapFrameEncode.cs" />
