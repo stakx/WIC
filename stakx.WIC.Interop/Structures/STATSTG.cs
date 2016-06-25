@@ -4,19 +4,20 @@ using System.Runtime.InteropServices;
 
 namespace stakx.WIC.Interop
 {
-    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    [StructLayout(LayoutKind.Sequential)]
     [EditorBrowsable(EditorBrowsableState.Advanced)]
     public unsafe struct STATSTG
     {
-        public unsafe char* pwcsName;
-        STGTY type;
-        long cbSize;
-        long mtime;
-        long ctime;
-        long atime;
-        StreamAccessMode grfMode;
-        LOCKTYPE grfLocksSupported;
-        Guid clsid;
-        int grfStateBits;
+        [MarshalAs(UnmanagedType.LPWStr)]
+        public string pwcsName;
+        public STGTY type;
+        public long cbSize;
+        public long mtime;
+        public long ctime;
+        public long atime;
+        public StreamAccessMode grfMode;
+        public LOCKTYPE grfLocksSupported;
+        public Guid clsid;
+        public int grfStateBits;
     }
 }

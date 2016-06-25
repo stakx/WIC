@@ -1,4 +1,3 @@
-﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace stakx.WIC.Interop
@@ -6,31 +5,19 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICStream)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICStream : IStream
+    public interface IWICStream : IStream
     {
         #region Members inherited from `IStream`
 
         #region Members inherited from `ISequentialStream`
 
-        new unsafe void Read(
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] void* pv,
+        new void Read(
+            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pv,
             [In] int cb,
             [Out] out int pcbRead);
 
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        new unsafe void RemoteRead(
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte* pv,
-            [In] int cb,
-            [Out] out int pcbRead);
-
-        new unsafe void Write(
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] void* pv,
-            [In] int cb,
-            [Out] out int pcbWritten);
-
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        new unsafe void RemoteWrite(
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte* pv,
+        new void Write(
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pv,
             [In] int cb,
             [Out] out int pcbWritten);
 
@@ -41,23 +28,10 @@ namespace stakx.WIC.Interop
             [In] STREAM_SEEK dwOrigin,
             [Out] out long plibNewPosition);
 
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        new void RemoteSeek(
-            [In] long dlibMove,
-            [In] STREAM_SEEK dwOrigin,
-            [Out] out long plibNewPosition);
-
         new void SetSize(
             [In] long libNewSize);
 
         new void CopyTo(
-            [In] IStream pstm,
-            [In] long cb,
-            [Out] out long pcbRead,
-            [Out] out long pcbWritten);
-
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
-        new void RemoteCopyTo(
             [In] IStream pstm,
             [In] long cb,
             [Out] out long pcbRead,
@@ -94,8 +68,8 @@ namespace stakx.WIC.Interop
             [In, MarshalAs(UnmanagedType.LPWStr)] string wzFileName,
             [In] StreamAccessMode dwDesiredAccess);
 
-        unsafe void InitializeFromMemory(
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte* pbBuffer,
+        void InitializeFromMemory(
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pbBuffer,
             [In] int cbBufferSize);
 
         void InitializeFromIStreamRegion(
