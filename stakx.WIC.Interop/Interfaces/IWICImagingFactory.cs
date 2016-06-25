@@ -44,8 +44,8 @@ namespace stakx.WIC.Interop
         void CreatePalette(
             [Out] out IWICPalette ppIPalette);
 
-        #warning `IWICImagingFactory.CreateFormatConverter` is incomplete.
-        void CreateFormatConverter();
+        void CreateFormatConverter(
+            [Out] out IWICFormatConverter ppIFormatConverter);
 
         #warning `IWICImagingFactory.CreateBitmapScaler` is incomplete.
         void CreateBitmapScaler();
