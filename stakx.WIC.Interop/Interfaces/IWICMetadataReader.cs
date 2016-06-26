@@ -19,14 +19,14 @@ namespace stakx.WIC.Interop
 
         void GetValueByIndex(
             [In] int nIndex,
-            [In, Out, MarshalAs(UnmanagedType.LPStruct)] ref PROPVARIANT pvarSchema,
-            [In, Out, MarshalAs(UnmanagedType.LPStruct)] ref PROPVARIANT pvarId,
-            [In, Out, MarshalAs(UnmanagedType.LPStruct)] ref PROPVARIANT pvarValue);
+            [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarSchema,
+            [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarId,
+            [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
         void GetValue(
-            [In, MarshalAs(UnmanagedType.LPStruct)] PROPVARIANT pvarSchema,
-            [In, MarshalAs(UnmanagedType.LPStruct)] PROPVARIANT pvarId,
-            [In, Out, MarshalAs(UnmanagedType.LPStruct)] ref PROPVARIANT pvarValue);
+            [In, MarshalAs(UnmanagedType.Struct)] PROPVARIANT pvarSchema,
+            [In, MarshalAs(UnmanagedType.Struct)] PROPVARIANT pvarId,
+            [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
         void GetEnumerator(
             [Out] out IWICEnumMetadataItem ppIEnumMetadata);

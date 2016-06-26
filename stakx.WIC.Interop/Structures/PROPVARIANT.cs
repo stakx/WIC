@@ -30,10 +30,22 @@ namespace stakx.WIC.Interop
         [FieldOffset(8)]
         public Guid* puuid;
 
-        #warning `PROPVARIANT.pwszVal` probably doesn't work as expected.
+        [FieldOffset(8)]
+        public IntPtr punkVal;
+
         [FieldOffset(8)]
         public char* pwszVal;
 
+        [FieldOffset(8)]
+        public PROPARRAY ca;
+
         #warning `PROPVARIANT` is incomplete.
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public unsafe struct PROPARRAY
+    {
+        public int cElems;
+        public IntPtr pElems;
     }
 }

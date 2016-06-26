@@ -1,5 +1,8 @@
-﻿namespace stakx.WIC.Interop
+﻿using System;
+
+namespace stakx.WIC.Interop
 {
+    [Flags]
     public enum VARTYPE : short
     {
         VT_EMPTY = 0,
@@ -47,10 +50,12 @@
         VT_CLSID = 72,
         VT_VERSIONED_STREAM = 73,
         VT_BSTR_BLOB = 0xfff,
+
         VT_VECTOR = 0x1000,
         VT_ARRAY = 0x2000,
         VT_BYREF = 0x4000,
         VT_RESERVED = unchecked((short)0x8000U),
+
         VT_ILLEGAL = unchecked((short)0xffffU),
     }
 }
