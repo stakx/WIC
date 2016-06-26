@@ -29,10 +29,12 @@
         public const string IWICFormatConverterInfo = "9f34fb65-13f4-4f15-bc57-3726b5e53d9f";
         public const string IWICImagingFactory = "ec5ec8a9-c395-4314-9c77-54d7a935ff70";
         public const string IWICMetadataBlockReader = "feaa2a8d-b3f3-43e4-b25c-d1de990a1ae1";
+        public const string IWICMetadataBlockWriter = "08fb9676-b444-41e8-8dbe-6a53a542bff1";
         public const string IWICMetadataHandlerInfo = "aba958bf-c672-44d1-8d61-ce6df2e682c2";
         public const string IWICMetadataQueryReader = "30989668-e1c9-4597-b395-458eedb808df";
         public const string IWICMetadataQueryWriter = "a721791a-0def-4d06-bd91-2118bf1db10b";
         public const string IWICMetadataReader = "9204fe99-d8fc-4fd5-a001-9536b067a899";
+        public const string IWICMetadataWriter = "f7836e16-3be0-470b-86bb-160d0aecd7de";
         public const string IWICPalette = "00000040-a8f2-4877-ba0a-fd2b6645fb94";
         public const string IWICStream = "135ff860-22b7-4ddf-b0f6-218f4f299a43";
     }
