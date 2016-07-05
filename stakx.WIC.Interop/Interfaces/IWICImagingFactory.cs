@@ -68,7 +68,7 @@ namespace stakx.WIC.Interop
         void CreateBitmap(
             [In] int uiWidth,
             [In] int uiHeight,
-            [In] Guid pixelFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFormat,
             [In] WICBitmapCreateCacheOption option,
             [Out] out IWICBitmap ppIBitmap);
 
@@ -88,7 +88,7 @@ namespace stakx.WIC.Interop
         unsafe void CreateBitmapFromMemory(
             [In] int uiWidth,
             [In] int uiHeight,
-            [In] Guid pixelFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFormat,
             [In] int cbStride,
             [In] int cbBufferSize,
             [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 4)] byte* pbBuffer,
