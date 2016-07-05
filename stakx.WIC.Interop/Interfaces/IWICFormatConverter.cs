@@ -34,15 +34,15 @@ namespace stakx.WIC.Interop
 
         void Initialize(
             [In] IWICBitmapSource pISource,
-            [In] Guid dstFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid dstFormat,
             [In] WICBitmapDitherType dither,
             [In] IWICPalette pIPalette,
             [In] double alphaThresholdPercent,
             [In] WICBitmapPaletteType paletteTranslate);
 
         void CanConvert(
-            [In] Guid srcPixelFormat,
-            [In] Guid dstPixelFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid srcPixelFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid dstPixelFormat,
             [Out] out bool pfCanConvert);
     }
 }

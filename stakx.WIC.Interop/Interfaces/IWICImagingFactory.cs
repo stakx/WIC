@@ -32,12 +32,12 @@ namespace stakx.WIC.Interop
             [Out] out IWICComponentInfo ppIInfo);
 
         unsafe void CreateDecoder(
-            [In] Guid guidContainerFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidContainerFormat,
             [In] Guid* pguidVendor,
             [Out] out IWICBitmapDecoder ppIDecoder);
 
         unsafe void CreateEncoder(
-            [In] Guid guidContainerFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidContainerFormat,
             [In] Guid* pguidVendor,
             [Out] out IWICBitmapEncoder ppIEncoder);
 
@@ -118,7 +118,7 @@ namespace stakx.WIC.Interop
             [Out] out IWICFastMetadataEncoder ppIFastEncoder);
 
         unsafe void CreateQueryWriter(
-            [In] Guid guidMetadataFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidMetadataFormat,
             [In] Guid* pguidVendor,
             [Out] out IWICMetadataQueryWriter ppIQueryWriter);
 

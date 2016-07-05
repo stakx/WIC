@@ -32,12 +32,12 @@ namespace stakx.WIC.Interop
             [Out] out IWICComponentInfo ppIInfo);
 
         void CreateDecoder(
-            [In] Guid guidContainerFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidContainerFormat,
             [In] IntPtr pguidVendor,
             [Out] out IWICBitmapDecoder ppIDecoder);
 
         void CreateEncoder(
-            [In] Guid guidContainerFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidContainerFormat,
             [In] IntPtr pguidVendor,
             [Out] out IWICBitmapEncoder ppIEncoder);
 
@@ -68,7 +68,7 @@ namespace stakx.WIC.Interop
         void CreateBitmap(
             [In] int uiWidth,
             [In] int uiHeight,
-            [In] Guid pixelFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFormat,
             [In] WICBitmapCreateCacheOption option,
             [Out] out IWICBitmap ppIBitmap);
 
@@ -88,7 +88,7 @@ namespace stakx.WIC.Interop
         void CreateBitmapFromMemory(
             [In] int uiWidth,
             [In] int uiHeight,
-            [In] Guid pixelFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFormat,
             [In] int cbStride,
             [In] int cbBufferSize,
             [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 4)] byte[] pbBuffer,
@@ -118,7 +118,7 @@ namespace stakx.WIC.Interop
             [Out] out IWICFastMetadataEncoder ppIFastEncoder);
 
         void CreateQueryWriter(
-            [In] Guid guidMetadataFormat,
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidMetadataFormat,
             [In] IntPtr pguidVendor,
             [Out] out IWICMetadataQueryWriter ppIQueryWriter);
 

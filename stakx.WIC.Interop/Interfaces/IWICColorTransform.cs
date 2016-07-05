@@ -36,6 +36,6 @@ namespace stakx.WIC.Interop
             [In] IWICBitmapSource pIBitmapSource,
             [In] IWICColorContext pIContextSource,
             [In] IWICColorContext pIContextDest,
-            [In] Guid pixelFmtDest);
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFmtDest);
     }
 }
