@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 // General information about all assemblies in this solution.
-[assembly: AssemblyProduct("stakx.WIC.Interop")]
+[assembly: AssemblyProduct("stakx.WIC")]
 [assembly: AssemblyCopyright("© 2016 stakx")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyTrademark("")]

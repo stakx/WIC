@@ -88,9 +88,11 @@ namespace stakx.WIC.Interop
 
         #endregion
 
-        #warning `IWICBitmapDecoderInfo.GetPatterns` is incomplete.
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        void GetPatterns();
+        void GetPatterns(
+            [In] int cbSizePatterns,
+            [In] IntPtr pPatterns,
+            [Out] out int pcPatterns,
+            [Out] out int pcbPatternsActual);
 
         bool MatchesPattern(
             [In] IStream pIStream);
