@@ -8,22 +8,18 @@ namespace stakx.WIC.Interop
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IWICComponentInfo
     {
-        void GetComponentType(
-            [Out] out WICComponentType pType);
+        WICComponentType GetComponentType();
 
-        void GetCLSID(
-            [Out] out Guid pclsid);
+        Guid GetCLSID();
 
-        void GetSigningStatus(
-            [Out] out WICComponentSigning pStatus);
+        WICComponentSigning GetSigningStatus();
 
         void GetAuthor(
             [In] int cchAuthor,
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U2, SizeParamIndex = 0)] char[] wzAuthor,
             [Out] out int pcchActual);
 
-        void GetVendorGUID(
-            [Out] out Guid pguidVendor);
+        Guid GetVendorGUID();
 
         void GetVersion(
             [In] int cchVersion,

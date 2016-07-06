@@ -6,7 +6,7 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICBitmapFrameEncode)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICBitmapFrameEncode
+    public interface IWICBitmapFrameEncode
     {
         void Initialize(
             [In] IPropertyBag2 pIEncoderOptions);
@@ -38,13 +38,12 @@ namespace stakx.WIC.Interop
             [In] int cbBufferSize,
             [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte[] pbPixels);
 
-        unsafe void WriteSource(
+        void WriteSource(
             [In] IWICBitmapSource pIBitmapSource,
-            [In] WICRect* prc);
+            [In] IntPtr prc);
 
         void Commit();
 
-        void GetMetadataQueryWriter(
-            [Out] out IWICMetadataQueryWriter ppIMetadataQueryWriter);
+        IWICMetadataQueryWriter GetMetadataQueryWriter();
     }
 }

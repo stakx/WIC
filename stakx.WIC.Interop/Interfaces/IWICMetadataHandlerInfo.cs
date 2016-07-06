@@ -10,22 +10,18 @@ namespace stakx.WIC.Interop
     {
         #region Members inherited from `IWICComponentInfo`
 
-        new void GetComponentType(
-            [Out] out WICComponentType pType);
+        new WICComponentType GetComponentType();
 
-        new void GetCLSID(
-            [Out] out Guid pclsid);
+        new Guid GetCLSID();
 
-        new void GetSigningStatus(
-            [Out] out WICComponentSigning pStatus);
+        new WICComponentSigning GetSigningStatus();
 
         new void GetAuthor(
             [In] int cchAuthor,
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U2, SizeParamIndex = 0)] char[] wzAuthor,
             [Out] out int pcchActual);
 
-        new void GetVendorGUID(
-            [Out] out Guid pguidVendor);
+        new Guid GetVendorGUID();
 
         new void GetVersion(
             [In] int cchVersion,
@@ -44,8 +40,7 @@ namespace stakx.WIC.Interop
 
         #endregion
 
-        void GetMetadataFormat(
-            [Out] out Guid pguidMetadataFormat);
+        Guid GetMetadataFormat();
 
         void GetContainerFormats(
              [In] int cContainerFormats,
@@ -62,13 +57,10 @@ namespace stakx.WIC.Interop
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U2, SizeParamIndex = 0)] char[] wzDeviceModels,
             [Out] out int pcchActual);
 
-        void DoesRequireFullStream(
-            [Out] out bool pfRequiresFullStream);
+        bool DoesRequireFullStream();
 
-        void DoesSupportPadding(
-            [Out] out bool pfSupportsPadding);
+        bool DoesSupportPadding();
 
-        void DoesRequireFixedSize(
-            [Out] out bool pfFixedSize);
+        bool DoesRequireFixedSize();
     }
 }

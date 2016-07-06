@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace stakx.WIC.Interop
@@ -7,7 +6,7 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IEnumString)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IEnumString
+    public interface IEnumString
     {
         void Next(
             [In] int celt,
@@ -19,7 +18,6 @@ namespace stakx.WIC.Interop
 
         void Reset();
 
-        void Clone(
-            [Out] out IEnumString ppenum);
+        IEnumString Clone();
     }
 }

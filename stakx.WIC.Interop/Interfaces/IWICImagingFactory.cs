@@ -6,125 +6,100 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICImagingFactory)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICImagingFactory
+    public interface IWICImagingFactory
     {
-        unsafe void CreateDecoderFromFilename(
+        IWICBitmapDecoder CreateDecoderFromFilename(
             [In, MarshalAs(UnmanagedType.LPWStr)] string wzFilename,
-            [In] Guid* pguidVendor,
+            [In] IntPtr pguidVendor,
             [In] StreamAccessMode dwDesiredAccess,
-            [In] WICDecodeOptions metadataOptions,
-            [Out] out IWICBitmapDecoder ppIDecoder);
+            [In] WICDecodeOptions metadataOptions);
 
-        unsafe void CreateDecoderFromStream(
+        IWICBitmapDecoder CreateDecoderFromStream(
             [In] IStream pIStream,
-            [In] Guid* pguidVendor,
-            [In] WICDecodeOptions metadataOptions,
-            [Out] out IWICBitmapDecoder ppIDecoder);
+            [In] IntPtr pguidVendor,
+            [In] WICDecodeOptions metadataOptions);
 
-        unsafe void CreateDecoderFromFileHandle(
+        IWICBitmapDecoder CreateDecoderFromFileHandle(
             [In] IntPtr hFile,
-            [In] Guid* pguidVendor,
-            [In] WICDecodeOptions metadataOptions,
-            [Out] out IWICBitmapDecoder ppIDecoder);
+            [In] IntPtr pguidVendor,
+            [In] WICDecodeOptions metadataOptions);
 
-        void CreateComponentInfo(
-            [In] Guid clsidComponent,
-            [Out] out IWICComponentInfo ppIInfo);
+        IWICComponentInfo CreateComponentInfo(
+            [In] Guid clsidComponent);
 
-        unsafe void CreateDecoder(
+        IWICBitmapDecoder CreateDecoder(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidContainerFormat,
-            [In] Guid* pguidVendor,
-            [Out] out IWICBitmapDecoder ppIDecoder);
+            [In] IntPtr pguidVendor);
 
-        unsafe void CreateEncoder(
+        IWICBitmapEncoder CreateEncoder(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidContainerFormat,
-            [In] Guid* pguidVendor,
-            [Out] out IWICBitmapEncoder ppIEncoder);
+            [In] IntPtr pguidVendor);
 
-        void CreatePalette(
-            [Out] out IWICPalette ppIPalette);
+        IWICPalette CreatePalette();
 
-        void CreateFormatConverter(
-            [Out] out IWICFormatConverter ppIFormatConverter);
+        IWICFormatConverter CreateFormatConverter();
 
-        void CreateBitmapScaler(
-            [Out] out IWICBitmapScaler ppIBitmapScaler);
+        IWICBitmapScaler CreateBitmapScaler();
 
-        void CreateBitmapClipper(
-            [Out] out IWICBitmapClipper ppIBitmapClipper);
+        IWICBitmapClipper CreateBitmapClipper();
 
-        void CreateBitmapFlipRotator(
-            [Out] out IWICBitmapFlipRotator ppIBitmapFlipRotator);
+        IWICBitmapFlipRotator CreateBitmapFlipRotator();
 
-        void CreateStream(
-            [Out] out IWICStream ppIWICStream);
+        IWICStream CreateStream();
 
-        void CreateColorContext(
-            [Out] out IWICColorContext ppIWICColorContext);
+        IWICColorContext CreateColorContext();
 
-        void CreateColorTransformer(
-            [Out] out IWICColorTransform ppIWICColorTransform);
+        IWICColorTransform CreateColorTransformer();
 
-        void CreateBitmap(
+        IWICBitmap CreateBitmap(
             [In] int uiWidth,
             [In] int uiHeight,
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFormat,
-            [In] WICBitmapCreateCacheOption option,
-            [Out] out IWICBitmap ppIBitmap);
+            [In] WICBitmapCreateCacheOption option);
 
-        void CreateBitmapFromSource(
+        IWICBitmap CreateBitmapFromSource(
             [In] IWICBitmapSource pIBitmapSource,
-            [In] WICBitmapCreateCacheOption option,
-            [Out] out IWICBitmap ppIBitmap);
+            [In] WICBitmapCreateCacheOption option);
 
-        void CreateBitmapFromSourceRect(
+        IWICBitmap CreateBitmapFromSourceRect(
             [In] IWICBitmapSource pIBitmapSource,
             [In] int x,
             [In] int y,
             [In] int width,
-            [In] int height,
-            [Out] out IWICBitmap ppIBitmap);
+            [In] int height);
 
-        unsafe void CreateBitmapFromMemory(
+        IWICBitmap CreateBitmapFromMemory(
             [In] int uiWidth,
             [In] int uiHeight,
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid pixelFormat,
             [In] int cbStride,
             [In] int cbBufferSize,
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 4)] byte* pbBuffer,
-            [Out] out IWICBitmap ppIBitmap);
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 4)] byte[] pbBuffer);
 
-        void CreateBitmapFromHBITMAP(
+        IWICBitmap CreateBitmapFromHBITMAP(
             [In] IntPtr hBitmap,
             [In] IntPtr hPalette,
-            [In] WICBitmapAlphaChannelOption options,
-            [Out] out IWICBitmap ppIBitmap);
+            [In] WICBitmapAlphaChannelOption options);
 
-        void CreateBitmapFromHICON(
-            [In] IntPtr hIcon,
-            [Out] out IWICBitmap ppIBitmap);
+        IWICBitmap CreateBitmapFromHICON(
+            [In] IntPtr hIcon);
 
-        void CreateComponentEnumerator(
+        IEnumUnknown CreateComponentEnumerator(
             [In] WICComponentType componentTypes,
-            [In] WICComponentEnumerateOptions options,
-            [Out] out IEnumUnknown ppIEnumUnknown);
+            [In] WICComponentEnumerateOptions options);
 
-        void CreateFastMetadataEncoderFromDecoder(
-            [In] IWICBitmapDecoder pIDecoder,
-            [Out] out IWICFastMetadataEncoder ppIFastEncoder);
+        IWICFastMetadataEncoder CreateFastMetadataEncoderFromDecoder(
+            [In] IWICBitmapDecoder pIDecoder);
 
-        void CreateFastMetadataEncoderFromFrameDecode(
-            [In] IWICBitmapFrameDecode pIFrameDecoder,
-            [Out] out IWICFastMetadataEncoder ppIFastEncoder);
+        IWICFastMetadataEncoder CreateFastMetadataEncoderFromFrameDecode(
+            [In] IWICBitmapFrameDecode pIFrameDecoder);
 
-        unsafe void CreateQueryWriter(
+        IWICMetadataQueryWriter CreateQueryWriter(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid guidMetadataFormat,
-            [In] Guid* pguidVendor,
-            [Out] out IWICMetadataQueryWriter ppIQueryWriter);
+            [In] IntPtr pguidVendor);
 
-        unsafe void CreateQueryWriterFromReader(
+        IWICMetadataQueryWriter CreateQueryWriterFromReader(
             [In] IWICMetadataQueryReader pIQueryReader,
-            [In] Guid* pguidVendor,
-            [Out] out IWICMetadataQueryWriter ppIQueryWriter);
+            [In] IntPtr pguidVendor);
     }
 }

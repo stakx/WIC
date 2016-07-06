@@ -6,20 +6,17 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICBitmapLock)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICBitmapLock
+    public interface IWICBitmapLock
     {
         void GetSize(
             [Out] out int puiWidth,
             [Out] out int puiHeight);
 
-        void GetStride(
-            [Out] out int pcbStride);
+        int GetStride();
 
-        unsafe void GetDataPointer(
-            [Out] out int pcbBufferSize,
-            [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 0)] out byte* ppbData);
+        IntPtr GetDataPointer( // byte*
+            [Out] out int pcbBufferSize);
 
-        void GetPixelFormat(
-            [Out] out Guid pPixelFormat);
+        Guid GetPixelFormat();
     }
 }

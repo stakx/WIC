@@ -8,17 +8,13 @@ namespace stakx.WIC.Interop
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IWICMetadataBlockReader
     {
-        void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        Guid GetContainerFormat();
 
-        void GetCount(
-            [Out] out int pcCount);
+        int GetCount();
 
-        void GetReaderByIndex(
-            [In] int nIndex,
-            [Out] out IWICMetadataReader ppIMetadataReader);
+        IWICMetadataReader GetReaderByIndex(
+            [In] int nIndex);
 
-        void GetEnumerator(
-            [Out] out IEnumUnknown ppIEnumMetadata);
+        IEnumUnknown GetEnumerator();
     }
 }

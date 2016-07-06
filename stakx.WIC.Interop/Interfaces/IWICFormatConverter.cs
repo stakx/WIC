@@ -6,7 +6,7 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICFormatConverter)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICFormatConverter : IWICBitmapSource
+    public interface IWICFormatConverter : IWICBitmapSource
     {
         #region Members inherited from `IWICBitmapSource`
 
@@ -14,8 +14,7 @@ namespace stakx.WIC.Interop
             [Out] out int puiWidth,
             [Out] out int puiHeight);
 
-        new void GetPixelFormat(
-            [Out] out Guid pPixelFormat);
+        new Guid GetPixelFormat();
 
         new void GetResolution(
             [Out] out double pDpiX,
@@ -24,11 +23,11 @@ namespace stakx.WIC.Interop
         new void CopyPalette(
             [In] IWICPalette pIPalette);
 
-        new unsafe void CopyPixels(
-            [In] WICRect* prc,
+        new void CopyPixels(
+            [In] IntPtr prc, // WICRect*
             [In] int cbStride,
             [In] int cbBufferSize,
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte* pbBuffer);
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte[] pbBuffer);
 
         #endregion
 
@@ -40,9 +39,8 @@ namespace stakx.WIC.Interop
             [In] double alphaThresholdPercent,
             [In] WICBitmapPaletteType paletteTranslate);
 
-        void CanConvert(
+        bool CanConvert(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid srcPixelFormat,
-            [In, MarshalAs(UnmanagedType.LPStruct)] Guid dstPixelFormat,
-            [Out] out bool pfCanConvert);
+            [In, MarshalAs(UnmanagedType.LPStruct)] Guid dstPixelFormat);
     }
 }

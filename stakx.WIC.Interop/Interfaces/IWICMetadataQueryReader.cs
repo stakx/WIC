@@ -8,8 +8,7 @@ namespace stakx.WIC.Interop
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IWICMetadataQueryReader
     {
-        void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        Guid GetContainerFormat();
 
         void GetLocation(
             [In] int cchMaxLength,
@@ -20,7 +19,6 @@ namespace stakx.WIC.Interop
             [In, MarshalAs(UnmanagedType.LPWStr)] string wzName,
             [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
-        void GetEnumerator(
-            [Out] out IEnumString ppIEnumString);
+        IEnumString GetEnumerator();
     }
 }

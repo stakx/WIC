@@ -10,14 +10,11 @@ namespace stakx.WIC.Interop
     {
         #region Members inherited from `IWICMetadataReader`
 
-        new void GetMetadataFormat(
-            [Out] out Guid pguidMetadataFormat);
+        new Guid GetMetadataFormat();
 
-        new void GetMetadataHandlerInfo(
-            [Out] out IWICMetadataHandlerInfo ppIHandler);
+        new IWICMetadataHandlerInfo GetMetadataHandlerInfo();
 
-        new void GetCount(
-            [Out] out int pcCount);
+        new int GetCount();
 
         new void GetValueByIndex(
             [In] int nIndex,
@@ -30,8 +27,7 @@ namespace stakx.WIC.Interop
             [In, MarshalAs(UnmanagedType.Struct)] PROPVARIANT pvarId,
             [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
-        new void GetEnumerator(
-            [Out] out IWICEnumMetadataItem ppIEnumMetadata);
+        new IWICEnumMetadataItem GetEnumerator();
 
         #endregion
 

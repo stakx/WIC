@@ -17,7 +17,6 @@ namespace stakx.WIC.Interop
 
         void Reset();
 
-        void Clone(
-            [Out] out IEnumUnknown ppenum);
+        IEnumUnknown Clone();
     }
 }

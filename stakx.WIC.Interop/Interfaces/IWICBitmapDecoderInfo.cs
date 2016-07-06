@@ -7,28 +7,24 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICBitmapDecoderInfo)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICBitmapDecoderInfo : IWICBitmapCodecInfo
+    public interface IWICBitmapDecoderInfo : IWICBitmapCodecInfo
     {
         #region Members inherited from `IWICBitmapCodecInfo`
 
         #region Members inherited from `IWICComponentInfo`
 
-        new void GetComponentType(
-            [Out] out WICComponentType pType);
+        new WICComponentType GetComponentType();
 
-        new void GetCLSID(
-            [Out] out Guid pclsid);
+        new Guid GetCLSID();
 
-        new void GetSigningStatus(
-            [Out] out WICComponentSigning pStatus);
+        new WICComponentSigning GetSigningStatus();
 
         new void GetAuthor(
             [In] int cchAuthor,
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U2, SizeParamIndex = 0)] char[] wzAuthor,
             [Out] out int pcchActual);
 
-        new void GetVendorGUID(
-            [Out] out Guid pguidVendor);
+        new Guid GetVendorGUID();
 
         new void GetVersion(
             [In] int cchVersion,
@@ -47,8 +43,7 @@ namespace stakx.WIC.Interop
 
         #endregion
 
-        new void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        new Guid GetContainerFormat();
 
         new void GetPixelFormats(
             [In] int cFormats,
@@ -80,33 +75,26 @@ namespace stakx.WIC.Interop
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U2, SizeParamIndex = 0)] char[] wzFileExtensions,
             [Out] out int pcchActual);
 
-        new void DoesSupportAnimation(
-            [Out] out bool pfSupportAnimation);
+        new bool DoesSupportAnimation();
 
-        new void DoesSupportChromakey(
-            [Out] out bool pfSupportChromakey);
+        new bool DoesSupportChromakey();
 
-        new void DoesSupportLossless(
-            [Out] out bool pfSupportLossless);
+        new bool DoesSupportLossless();
 
-        new void DoesSupportMultiframe(
-            [Out] out bool pfSupportMultiframe);
+        new bool DoesSupportMultiframe();
 
-        new void MatchesMimeType(
-            [In, MarshalAs(UnmanagedType.LPWStr)] string wzMimeType,
-            [Out] out bool pfMatches);
+        new bool MatchesMimeType(
+            [In, MarshalAs(UnmanagedType.LPWStr)] string wzMimeType);
 
-#endregion
+        #endregion
 
         #warning `IWICBitmapDecoderInfo.GetPatterns` is incomplete.
         [EditorBrowsable(EditorBrowsableState.Never)]
         void GetPatterns();
 
-        void MatchesPattern(
-            [In] IStream pIStream,
-            [Out] out bool pfMatches);
+        bool MatchesPattern(
+            [In] IStream pIStream);
 
-        void CreateInstance(
-            [Out] out IWICBitmapDecoder ppIBitmapDecoder);
+        IWICBitmapDecoder CreateInstance();
     }
 }

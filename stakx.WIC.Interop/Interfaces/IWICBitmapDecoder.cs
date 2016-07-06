@@ -8,42 +8,34 @@ namespace stakx.WIC.Interop
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IWICBitmapDecoder
     {
-        void QueryCapability(
-            [In] IStream pIStream,
-            [Out] out WICBitmapDecoderCapabilities pdwCapability);
+        WICBitmapDecoderCapabilities QueryCapability(
+            [In] IStream pIStream);
 
         void Initialize(
             [In] IStream pIStream,
             [In] WICDecodeOptions cacheOptions);
 
-        void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        Guid GetContainerFormat();
 
-        void GetDecoderInfo(
-            [Out] out IWICBitmapDecoderInfo ppIDecoderInfo);
+        IWICBitmapDecoderInfo GetDecoderInfo();
 
         void CopyPalette(
             [In] IWICPalette pIPalette);
 
-        void GetMetadataQueryReader(
-            [Out] out IWICMetadataQueryReader ppIMetadataQueryReader);
+        IWICMetadataQueryReader GetMetadataQueryReader();
 
-        void GetPreview(
-            [Out] out IWICBitmapSource ppIBitmapSource);
+        IWICBitmapSource GetPreview();
 
         void GetColorContexts(
             [In] int cCount,
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.Interface, SizeParamIndex = 0)] IWICColorContext[] ppIColorContexts,
             [Out] out int pcActualCount);
 
-        void GetThumbnail(
-            [Out] out IWICBitmapSource ppIThumbnail);
+        IWICBitmapSource GetThumbnail();
 
-        void GetFrameCount(
-            [Out] out int pCount);
+        int GetFrameCount();
 
-        void GetFrame(
-            [In] int index,
-            [Out] out IWICBitmapFrameDecode ppIBitmapFrame);
+        IWICBitmapFrameDecode GetFrame(
+            [In] int index);
     }
 }

@@ -19,7 +19,6 @@ namespace stakx.WIC.Interop
 
         void Reset();
 
-        void Clone(
-            [Out] out IWICEnumMetadataItem ppIEnumMetadataItem);
+        IWICEnumMetadataItem Clone();
     }
 }

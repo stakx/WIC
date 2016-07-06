@@ -10,22 +10,18 @@ namespace stakx.WIC.Interop
     {
         #region Members inherited from `IWICComponentInfo`
 
-        new void GetComponentType(
-            [Out] out WICComponentType pType);
+        new WICComponentType GetComponentType();
 
-        new void GetCLSID(
-            [Out] out Guid pclsid);
+        new Guid GetCLSID();
 
-        new void GetSigningStatus(
-            [Out] out WICComponentSigning pStatus);
+        new WICComponentSigning GetSigningStatus();
 
         new void GetAuthor(
             [In] int cchAuthor,
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U2, SizeParamIndex = 0)] char[] wzAuthor,
             [Out] out int pcchActual);
 
-        new void GetVendorGUID(
-            [Out] out Guid pguidVendor);
+        new Guid GetVendorGUID();
 
         new void GetVersion(
             [In] int cchVersion,
@@ -49,7 +45,6 @@ namespace stakx.WIC.Interop
             [In, Out, MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 0)] Guid[] pPixelFormatGUIDs,
             [Out] out int pcActual);
 
-        void CreateInstance(
-            [Out] out IWICFormatConverter ppIConverter);
+        IWICFormatConverter CreateInstance();
     }
 }

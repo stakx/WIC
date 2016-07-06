@@ -6,7 +6,7 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICBitmapFrameDecode)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICBitmapFrameDecode : IWICBitmapSource
+    public interface IWICBitmapFrameDecode : IWICBitmapSource
     {
         #region Members inherited from `IWICBitmapSource`
 
@@ -14,8 +14,7 @@ namespace stakx.WIC.Interop
             [Out] out int puiWidth,
             [Out] out int puiHeight);
 
-        new void GetPixelFormat(
-            [Out] out Guid pPixelFormat);
+        new Guid GetPixelFormat();
 
         new void GetResolution(
             [Out] out double pDpiX,
@@ -24,23 +23,21 @@ namespace stakx.WIC.Interop
         new void CopyPalette(
             [In] IWICPalette pIPalette);
 
-        new unsafe void CopyPixels(
-            [In] WICRect* prc,
+        new void CopyPixels(
+            [In] IntPtr prc, // WICRect*
             [In] int cbStride,
             [In] int cbBufferSize,
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte* pbBuffer);
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte[] pbBuffer);
 
         #endregion
 
-        void GetMetadataQueryReader(
-            [Out] out IWICMetadataQueryReader ppIMetadataQueryReader);
+        IWICMetadataQueryReader GetMetadataQueryReader();
 
         void GetColorContexts(
              [In] int cCount,
              [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.Interface, SizeParamIndex = 0)] IWICColorContext[] ppIColorContexts,
              [Out] out int pcActualCount);
 
-        void GetThumbnail(
-            [Out] out IWICBitmapSource ppIThumbnail);
+        IWICBitmapSource GetThumbnail();
     }
 }

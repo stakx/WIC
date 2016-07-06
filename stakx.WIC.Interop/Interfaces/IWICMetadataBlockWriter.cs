@@ -10,27 +10,22 @@ namespace stakx.WIC.Interop
     {
         #region Members inherited from `IWICMetadataBlockReader`
 
-        new void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        new Guid GetContainerFormat();
 
-        new void GetCount(
-            [Out] out int pcCount);
+        new int GetCount();
 
-        new void GetReaderByIndex(
-            [In] int nIndex,
-            [Out] out IWICMetadataReader ppIMetadataReader);
+        new IWICMetadataReader GetReaderByIndex(
+            [In] int nIndex);
 
-        new void GetEnumerator(
-            [Out] out IEnumUnknown ppIEnumMetadata);
+        new IEnumUnknown GetEnumerator();
 
         #endregion
 
         void InitializeFromBlockReader(
             [In] IWICMetadataBlockReader pIMDBlockReader);
 
-        void GetWriterByIndex(
-            [In] int nIndex,
-            [Out] out IWICMetadataWriter ppIMetadataWriter);
+        IWICMetadataWriter GetWriterByIndex(
+            [In] int nIndex);
 
         void AddWriter(
             [In] IWICMetadataWriter pIMetadataWriter);

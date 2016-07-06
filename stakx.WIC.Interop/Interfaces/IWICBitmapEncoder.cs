@@ -12,11 +12,9 @@ namespace stakx.WIC.Interop
             [In] IStream pIStream,
             [In] WICBitmapEncoderCacheOption cacheOption);
 
-        void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        Guid GetContainerFormat();
 
-        void GetEncoderInfo(
-            [Out] out IWICBitmapEncoderInfo ppIEncoderInfo);
+        IWICBitmapEncoderInfo GetEncoderInfo();
 
         void SetColorContexts(
             [In] int cCount,
@@ -37,7 +35,6 @@ namespace stakx.WIC.Interop
 
         void Commit();
 
-        void GetMetadataQueryWriter(
-            [Out] out IWICMetadataQueryWriter ppIMetadataQueryWriter);
+        IWICMetadataQueryWriter GetMetadataQueryWriter();
     }
 }

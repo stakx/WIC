@@ -24,24 +24,19 @@ namespace stakx.WIC.Interop
         void InitializeFromPalette(
             [In] IWICPalette pIPalette);
 
-        void GetType(
-            [Out] out WICBitmapPaletteType pePaletteType);
+        WICBitmapPaletteType GetType();
 
-        void GetColorCount(
-            [Out] int pcCount);
+        int GetColorCount();
 
         void GetColors(
             [In] int cCount,
             [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U4, SizeParamIndex = 0)] int[] pColors,
             [Out] out int pcActualColors);
 
-        void IsBlackWhite(
-            [Out] out bool pfIsBlackWhite);
+        bool IsBlackWhite();
 
-        void IsGrayscale(
-            [Out] out bool pfIsGrayscale);
+        bool IsGrayscale();
 
-        void HasAlpha(
-            [Out] out bool pfHasAlpha);
+        bool HasAlpha();
     }
 }

@@ -21,7 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -78,7 +78,6 @@
     <Compile Include="Interfaces\IWICBitmapFlipRotator.cs" />
     <Compile Include="Interfaces\IWICBitmapFrameDecode.cs" />
     <Compile Include="Interfaces\IWICBitmapFrameEncode.cs" />
-    <Compile Include="Interfaces\IWICBitmapFrameEncodeSafe.cs" />
     <Compile Include="Interfaces\IWICBitmapLock.cs" />
     <Compile Include="Interfaces\IWICBitmapScaler.cs" />
     <Compile Include="Interfaces\IWICBitmapSource.cs" />
@@ -90,7 +89,6 @@
     <Compile Include="Interfaces\IWICFormatConverter.cs" />
     <Compile Include="Interfaces\IWICFormatConverterInfo.cs" />
     <Compile Include="Interfaces\IWICImagingFactory.cs" />
-    <Compile Include="Interfaces\IWICImagingFactorySafe.cs" />
     <Compile Include="Interfaces\IWICMetadataBlockReader.cs" />
     <Compile Include="Interfaces\IWICMetadataBlockWriter.cs" />
     <Compile Include="Interfaces\IWICMetadataHandlerInfo.cs" />

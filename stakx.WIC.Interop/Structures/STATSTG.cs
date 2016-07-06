@@ -6,7 +6,7 @@ namespace stakx.WIC.Interop
 {
     [StructLayout(LayoutKind.Sequential)]
     [EditorBrowsable(EditorBrowsableState.Advanced)]
-    public unsafe struct STATSTG
+    public struct STATSTG
     {
         [MarshalAs(UnmanagedType.LPWStr)]
         public string pwcsName;

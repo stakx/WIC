@@ -9,7 +9,6 @@ namespace stakx.WIC.Interop
     {
         void Commit();
 
-        void GetMetadataQueryWriter(
-            [Out] out IWICMetadataQueryWriter ppIMetadataQueryWriter);
+        IWICMetadataQueryWriter GetMetadataQueryWriter();
     }
 }

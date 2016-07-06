@@ -10,8 +10,7 @@ namespace stakx.WIC.Interop
     {
         #region Members inherited from `IWICMetadataQueryReader`
 
-        new void GetContainerFormat(
-            [Out] out Guid pguidContainerFormat);
+        new Guid GetContainerFormat();
 
         new void GetLocation(
             [In] int cchMaxLength,
@@ -22,8 +21,7 @@ namespace stakx.WIC.Interop
             [In, MarshalAs(UnmanagedType.LPWStr)] string wzName,
             [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
-        new void GetEnumerator(
-            [Out] out IEnumString ppIEnumString);
+        new IEnumString GetEnumerator();
 
         #endregion
 

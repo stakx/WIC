@@ -6,14 +6,13 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICBitmapSource)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public unsafe interface IWICBitmapSource
+    public interface IWICBitmapSource
     {
         void GetSize(
             [Out] out int puiWidth,
             [Out] out int puiHeight);
 
-        void GetPixelFormat(
-            [Out] out Guid pPixelFormat);
+        Guid GetPixelFormat();
 
         void GetResolution(
             [Out] out double pDpiX,
@@ -22,10 +21,10 @@ namespace stakx.WIC.Interop
         void CopyPalette(
             [In] IWICPalette pIPalette);
 
-        unsafe void CopyPixels(
-            [In] WICRect* prc,
+        void CopyPixels(
+            [In] IntPtr prc, // WICRect*
             [In] int cbStride,
             [In] int cbBufferSize,
-            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte* pbBuffer);
+            [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 2)] byte[] pbBuffer);
     }
 }

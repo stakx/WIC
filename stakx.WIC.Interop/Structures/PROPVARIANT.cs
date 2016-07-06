@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 namespace stakx.WIC.Interop
 {
     [StructLayout(LayoutKind.Explicit)]
-    public unsafe struct PROPVARIANT
+    public struct PROPVARIANT
     {
         [FieldOffset(0)]
         public VARTYPE vt;
@@ -28,13 +28,13 @@ namespace stakx.WIC.Interop
         public double dblVal;
 
         [FieldOffset(8)]
-        public Guid* puuid;
+        public IntPtr puuid; // Guid*
 
         [FieldOffset(8)]
         public IntPtr punkVal;
 
         [FieldOffset(8)]
-        public char* pwszVal;
+        public IntPtr pwszVal; // char*
 
         [FieldOffset(8)]
         public PROPARRAY ca;
@@ -43,7 +43,7 @@ namespace stakx.WIC.Interop
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public unsafe struct PROPARRAY
+    public struct PROPARRAY
     {
         public int cElems;
         public IntPtr pElems;

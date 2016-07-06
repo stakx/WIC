@@ -18,15 +18,13 @@ namespace stakx.WIC.Interop
         void InitializeFromExifColorSpace(
             [In] ExifColorSpace value);
 
-        void GetType(
-            [Out] out WICColorContextType pType);
+        WICColorContextType GetType();
 
         void GetProfileBytes(
             [In] int cbBuffer,
             [In, Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 0)] byte[] pbBuffer,
             [Out] out int pcbActual);
 
-        void GetExifColorSpace(
-            [Out] out ExifColorSpace pValue);
+        ExifColorSpace GetExifColorSpace();
     }
 }

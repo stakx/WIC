@@ -8,14 +8,11 @@ namespace stakx.WIC.Interop
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IWICMetadataReader
     {
-        void GetMetadataFormat(
-            [Out] out Guid pguidMetadataFormat);
+        Guid GetMetadataFormat();
 
-        void GetMetadataHandlerInfo(
-            [Out] out IWICMetadataHandlerInfo ppIHandler);
+        IWICMetadataHandlerInfo GetMetadataHandlerInfo();
 
-        void GetCount(
-            [Out] out int pcCount);
+        int GetCount();
 
         void GetValueByIndex(
             [In] int nIndex,
@@ -28,7 +25,6 @@ namespace stakx.WIC.Interop
             [In, MarshalAs(UnmanagedType.Struct)] PROPVARIANT pvarId,
             [In, Out, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
-        void GetEnumerator(
-            [Out] out IWICEnumMetadataItem ppIEnumMetadata);
+        IWICEnumMetadataItem GetEnumerator();
     }
 }

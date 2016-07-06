@@ -5,7 +5,7 @@ namespace stakx.WIC.Interop
     [ComImport]
     [Guid(IID.IWICImagingFactory)]
     [CoClass(typeof(WICImagingFactoryClass))]
-    public interface WICImagingFactory : IWICImagingFactory, IWICImagingFactorySafe { }
+    public interface WICImagingFactory : IWICImagingFactory { }
 
     [ComImport]
     [Guid(CLSID.WICImagingFactory)]

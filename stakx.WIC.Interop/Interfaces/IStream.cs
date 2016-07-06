@@ -55,7 +55,6 @@ namespace stakx.WIC.Interop
             [In, Out] ref STATSTG pstatstg,
             [In] STATFLAG grfStatFlag);
 
-        void Clone(
-            [Out] out IStream ppstm);
+        IStream Clone();
     }
 }
