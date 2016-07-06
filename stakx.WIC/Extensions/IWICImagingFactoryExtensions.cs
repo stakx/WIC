@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace stakx.WIC.Interop
 {
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
     public static class IWICImagingFactoryExtensions
     {
         public static IWICBitmapDecoder CreateDecoderFromFileHandle(this IWICImagingFactory imagingFactory, IntPtr hFile, WICDecodeOptions metadataOptions, Guid? pguidVendor = null)
