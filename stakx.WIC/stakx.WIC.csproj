@@ -7,7 +7,7 @@
     <ProjectGuid>{9D77F053-8DC1-4128-A447-CB0D67E686B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>stakx.WIC.Interop</RootNamespace>
+    <RootNamespace>stakx.WIC</RootNamespace>
     <AssemblyName>stakx.WIC</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,18 +39,30 @@
     </Compile>
     <Compile Include="Constants\ContainerFormat.cs" />
     <Compile Include="Constants\Vendor.cs" />
+    <Compile Include="Extensions\IEnumStringExtensions.cs" />
+    <Compile Include="Extensions\IEnumUnknownExtensions.cs" />
+    <Compile Include="Extensions\IWICBitmapCodecInfoExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapDecoderExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapDecoderInfoExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapEncoderExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapFrameDecodeExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapFrameEncodeExtensions.cs" />
+    <Compile Include="Extensions\IWICBitmapLockExtensions.cs" />
+    <Compile Include="Extensions\IWICBitmapScalerExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapSourceExtensions.cs" />
+    <Compile Include="Extensions\IWICColorContextExtensions.cs" />
     <Compile Include="Extensions\IWICComponentInfoExtensions.cs" />
+    <Compile Include="Extensions\IWICFormatConverterInfoExtensions.cs" />
     <Compile Include="Extensions\IWICImagingFactoryExtensions.cs" />
+    <Compile Include="Extensions\IWICMetadataHandlerInfoExtensions.cs" />
+    <Compile Include="Extensions\IWICMetadataQueryReaderExtensions.cs" />
+    <Compile Include="Extensions\IWICPaletteExtensions.cs" />
+    <Compile Include="FetchIntoBufferMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoTaskMemPtr.cs" />
-    <Compile Include="StringBufferMethod.cs" />
+    <Compile Include="Structures\Resolution.cs" />
+    <Compile Include="Structures\Size.cs" />
     <Compile Include="Structures\WICBitmapPattern.cs" />
   </ItemGroup>
   <ItemGroup>

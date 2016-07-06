@@ -6,6 +6,21 @@ namespace stakx.WIC.Interop
     [EditorBrowsable(EditorBrowsableState.Advanced)]
     public static class IWICImagingFactoryExtensions
     {
+        public static IWICBitmap CreateBitmap(this IWICImagingFactory imagingFactory, Size size, Guid pixelFormat, WICBitmapCreateCacheOption option)
+        {
+            return imagingFactory.CreateBitmap(size.Width, size.Height, pixelFormat, option);
+        }
+
+        public static IWICBitmap CreateBitmapFromSourceRect(this IWICImagingFactory imagingFactory, IWICBitmapSource pIBitmapSource, WICRect rect)
+        {
+            return imagingFactory.CreateBitmapFromSourceRect(pIBitmapSource, rect.X, rect.Y, rect.Width, rect.Height);
+        }
+
+        public static IWICBitmap CreateBitmapFromMemory(this IWICImagingFactory imagingFactory, Size size, Guid pixelFormat, int cbStride, byte[] pbBuffer)
+        {
+            return imagingFactory.CreateBitmapFromMemory(size.Width, size.Height, pixelFormat, cbStride, pbBuffer.Length, pbBuffer);
+        }
+
         public static IWICBitmapDecoder CreateDecoderFromFileHandle(this IWICImagingFactory imagingFactory, IntPtr hFile, WICDecodeOptions metadataOptions, Guid? pguidVendor = null)
         {
             using (var pguidVendorPtr = CoTaskMemPtr.From(pguidVendor))

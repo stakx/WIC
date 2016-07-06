@@ -12,5 +12,19 @@ namespace stakx.WIC.Interop
                 bitmapSource.CopyPixels(prcPtr, cbStride, pbBuffer.Length, pbBuffer);
             }
         }
+
+        public static Size GetSize(this IWICBitmapSource bitmapSource)
+        {
+            int width, height;
+            bitmapSource.GetSize(out width, out height);
+            return new Size(width, height);
+        }
+
+        public static Resolution GetResolution(this IWICBitmapSource bitmapSource)
+        {
+            double dpiX, dpiY;
+            bitmapSource.GetResolution(out dpiX, out dpiY);
+            return new Resolution(dpiX, dpiY);
+        }
     }
 }

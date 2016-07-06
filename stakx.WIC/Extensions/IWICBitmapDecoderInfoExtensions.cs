@@ -7,36 +7,6 @@ namespace stakx.WIC.Interop
     [EditorBrowsable(EditorBrowsableState.Advanced)]
     public static class IWICBitmapDecoderInfoExtensions
     {
-        public static string GetColorManagementVersion(this IWICBitmapDecoderInfo bitmapDecoderInfo)
-        {
-            StringBufferMethod fn = bitmapDecoderInfo.GetColorManagementVersion;
-            return fn.InvokeAndConvertBufferToString();
-        }
-
-        public static string GetDeviceManufacturer(this IWICBitmapDecoderInfo bitmapDecoderInfo)
-        {
-            StringBufferMethod fn = bitmapDecoderInfo.GetDeviceManufacturer;
-            return fn.InvokeAndConvertBufferToString();
-        }
-
-        public static string GetDeviceModels(this IWICBitmapDecoderInfo bitmapDecoderInfo)
-        {
-            StringBufferMethod fn = bitmapDecoderInfo.GetDeviceModels;
-            return fn.InvokeAndConvertBufferToString();
-        }
-
-        public static string[] GetMimeTypes(this IWICBitmapDecoderInfo bitmapDecoderInfo)
-        {
-            StringBufferMethod fn = bitmapDecoderInfo.GetMimeTypes;
-            return fn.InvokeAndConvertBufferToString().Split(',');
-        }
-
-        public static string[] GetFileExtensions(this IWICBitmapDecoderInfo bitmapDecoderInfo)
-        {
-            StringBufferMethod fn = bitmapDecoderInfo.GetFileExtensions;
-            return fn.InvokeAndConvertBufferToString().Split(',');
-        }
-
         public static WICBitmapPattern[] GetPatterns(this IWICBitmapDecoderInfo bitmapDecoderInfo)
         {
             int count;

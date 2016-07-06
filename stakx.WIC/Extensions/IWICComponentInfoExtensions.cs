@@ -7,26 +7,26 @@ namespace stakx.WIC.Interop
     {
         public static string GetAuthor(this IWICComponentInfo componentInfo)
         {
-            StringBufferMethod fn = componentInfo.GetAuthor;
-            return fn.InvokeAndConvertBufferToString();
+            FetchIntoBuffer<char> fetcher = componentInfo.GetAuthor;
+            return fetcher.FetchString();
         }
 
         public static string GetFriendlyName(this IWICComponentInfo componentInfo)
         {
-            StringBufferMethod fn = componentInfo.GetFriendlyName;
-            return fn.InvokeAndConvertBufferToString();
+            FetchIntoBuffer<char> fetcher = componentInfo.GetFriendlyName;
+            return fetcher.FetchString();
         }
 
         public static string GetVersion(this IWICComponentInfo componentInfo)
         {
-            StringBufferMethod fn = componentInfo.GetVersion;
-            return fn.InvokeAndConvertBufferToString();
+            FetchIntoBuffer<char> fetcher = componentInfo.GetVersion;
+            return fetcher.FetchString();
         }
 
         public static string GetSpecVersion(this IWICComponentInfo componentInfo)
         {
-            StringBufferMethod fn = componentInfo.GetSpecVersion;
-            return fn.InvokeAndConvertBufferToString();
+            FetchIntoBuffer<char> fetcher = componentInfo.GetSpecVersion;
+            return fetcher.FetchString();
         }
     }
 }

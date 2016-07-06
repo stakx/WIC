@@ -15,6 +15,21 @@ namespace stakx.WIC.Interop
             bitmapFrameEncode.Initialize(pIEncoderOptions);
         }
 
+        public static void SetColorContexts(this IWICBitmapFrameEncode bitmapFrameEncode, IWICColorContext[] colorContexts)
+        {
+            bitmapFrameEncode.SetColorContexts(colorContexts.Length, colorContexts);
+        }
+
+        public static void SetResolution(this IWICBitmapFrameEncode bitmapFrameEncode, Resolution resolution)
+        {
+            bitmapFrameEncode.SetResolution(resolution.DpiX, resolution.DpiY);
+        }
+
+        public static void SetSize(this IWICBitmapFrameEncode bitmapFrameEncode, Size size)
+        {
+            bitmapFrameEncode.SetSize(size.Width, size.Height);
+        }
+
         public static void WriteSource(this IWICBitmapFrameEncode bitmapFrameEncode, IWICBitmapSource pIBitmapSource, WICRect? prc = null)
         {
             using (var prcPtr = CoTaskMemPtr.From(prc))

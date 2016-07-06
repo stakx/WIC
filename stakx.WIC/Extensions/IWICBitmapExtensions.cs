@@ -12,5 +12,10 @@ namespace stakx.WIC.Interop
                 return bitmap.Lock(prcLockPtr, flags);
             }
         }
+
+        public static void SetResolution(this IWICBitmap bitmap, Resolution resolution)
+        {
+            bitmap.SetResolution(resolution.DpiX, resolution.DpiY);
+        }
     }
 }
