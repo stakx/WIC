@@ -21,6 +21,14 @@ namespace stakx.WIC.Interop
             return imagingFactory.CreateBitmapFromMemory(size.Width, size.Height, pixelFormat, cbStride, pbBuffer.Length, pbBuffer);
         }
 
+        public static IWICBitmapDecoder CreateDecoder(this IWICImagingFactory imagingFactory, Guid guidContainerFormat, Guid? pguidVendor = null)
+        {
+            using (var pguidVendorPtr = CoTaskMemPtr.From(pguidVendor))
+            {
+                return imagingFactory.CreateDecoder(guidContainerFormat, pguidVendorPtr);
+            }
+        }
+
         public static IWICBitmapDecoder CreateDecoderFromFileHandle(this IWICImagingFactory imagingFactory, IntPtr hFile, WICDecodeOptions metadataOptions, Guid? pguidVendor = null)
         {
             using (var pguidVendorPtr = CoTaskMemPtr.From(pguidVendor))
