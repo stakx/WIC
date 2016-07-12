@@ -35,7 +35,7 @@ namespace stakx.WIC.Interop
         public long I8;
 
         [FieldOffset(0)]
-        public uint UI8;
+        public ulong UI8;
 
         [FieldOffset(0)]
         public PROPVARIANT_SplitI8 SplitI8;
