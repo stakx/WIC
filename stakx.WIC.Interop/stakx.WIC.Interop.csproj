@@ -62,6 +62,8 @@
     <Compile Include="Enumerations\WICComponentSigning.cs" />
     <Compile Include="Enumerations\WICComponentType.cs" />
     <Compile Include="Enumerations\WICDecodeOptions.cs" />
+    <Compile Include="Enumerations\WICMetadataCreationOptions.cs" />
+    <Compile Include="Enumerations\MetadataCreationAndPersistOptions.cs" />
     <Compile Include="Interfaces\IEnumString.cs" />
     <Compile Include="Interfaces\IEnumUnknown.cs" />
     <Compile Include="Interfaces\IErrorLog.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Interfaces\IWICBitmapSource.cs" />
     <Compile Include="Interfaces\IWICColorContext.cs" />
     <Compile Include="Interfaces\IWICColorTransform.cs" />
+    <Compile Include="Interfaces\IWICComponentFactory.cs" />
     <Compile Include="Interfaces\IWICComponentInfo.cs" />
     <Compile Include="Interfaces\IWICEnumMetadataItem.cs" />
     <Compile Include="Interfaces\IWICFastMetadataEncoder.cs" />
