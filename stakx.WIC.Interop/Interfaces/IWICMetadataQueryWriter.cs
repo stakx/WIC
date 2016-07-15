@@ -27,7 +27,7 @@ namespace stakx.WIC.Interop
 
         void SetMetadataByName(
            [In, MarshalAs(UnmanagedType.LPWStr)] string wzName,
-           [In, MarshalAs(UnmanagedType.LPStruct)] PROPVARIANT pvarValue);
+           [In, MarshalAs(UnmanagedType.Struct)] ref PROPVARIANT pvarValue);
 
         void RemoveMetadataByName(
            [In, MarshalAs(UnmanagedType.LPWStr)] string wzName);
