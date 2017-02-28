@@ -60,6 +60,7 @@
     <Compile Include="Extensions\IWICMetadataHandlerInfoExtensions.cs" />
     <Compile Include="Extensions\IWICMetadataQueryReaderExtensions.cs" />
     <Compile Include="Extensions\IWICPaletteExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
     <Compile Include="FetchIntoBufferMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CoTaskMemPtr.cs" />

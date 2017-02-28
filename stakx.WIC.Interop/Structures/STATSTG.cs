@@ -15,7 +15,7 @@ namespace stakx.WIC.Interop
         public long mtime;
         public long ctime;
         public long atime;
-        public StreamAccessMode grfMode;
+        public STGM grfMode;
         public LOCKTYPE grfLocksSupported;
         public Guid clsid;
         public int grfStateBits;

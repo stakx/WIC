@@ -46,6 +46,7 @@
     <Compile Include="Enumerations\ExifColorSpace.cs" />
     <Compile Include="Enumerations\LOCKTYPE.cs" />
     <Compile Include="Enumerations\STGC.cs" />
+    <Compile Include="Enumerations\STGM.cs" />
     <Compile Include="Enumerations\STGTY.cs" />
     <Compile Include="Enumerations\StreamAccessMode.cs" />
     <Compile Include="Enumerations\STREAM_SEEK.cs" />
