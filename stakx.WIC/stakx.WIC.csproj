@@ -42,6 +42,7 @@
     <Compile Include="Constants\Vendor.cs" />
     <Compile Include="Extensions\IEnumStringExtensions.cs" />
     <Compile Include="Extensions\IEnumUnknownExtensions.cs" />
+    <Compile Include="Extensions\IStreamExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapCodecInfoExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapDecoderExtensions.cs" />
     <Compile Include="Extensions\IWICBitmapDecoderInfoExtensions.cs" />

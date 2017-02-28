@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace stakx.WIC.Interop
@@ -13,19 +14,19 @@ namespace stakx.WIC.Interop
         new void Read(
             [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pv,
             [In] int cb,
-            [Out] out int pcbRead);
+            [Out] IntPtr pcbRead);
 
         new void Write(
             [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pv,
             [In] int cb,
-            [Out] out int pcbWritten);
+            [Out] IntPtr pcbWritten);
 
         #endregion
 
         void Seek(
             [In] long dlibMove,
             [In] STREAM_SEEK dwOrigin,
-            [Out] out long plibNewPosition);
+            [Out] IntPtr plibNewPosition);
 
         void SetSize(
             [In] long libNewSize);

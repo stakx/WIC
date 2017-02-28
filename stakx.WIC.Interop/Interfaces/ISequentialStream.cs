@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace stakx.WIC.Interop
@@ -11,11 +12,11 @@ namespace stakx.WIC.Interop
         void Read(
             [Out, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pv,
             [In] int cb,
-            [Out] out int pcbRead);
+            [Out] IntPtr pcbRead);
 
         void Write(
             [In, MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.U1, SizeParamIndex = 1)] byte[] pv,
             [In] int cb,
-            [Out] out int pcbWritten);
+            [Out] IntPtr pcbWritten);
     }
 }
