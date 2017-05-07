@@ -11,7 +11,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageLicenseUrl>https://github.com/stakx/stakx.WIC/blob/develop/LICENSE</PackageLicenseUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageTags>Windows, imaging, image processing, Windows Imaging Component, COM interop</PackageTags>
+    <PackageTags>windows imaging image-processing windows-imaging-component wic com-interop</PackageTags>
     <Product>stakx.WIC</Product>
     <Description>A COM interop library for .NET that makes Windows Imaging Component (WIC) available to managed code, including a thin layer of abstractions and extension methods to make it easier to work with the raw WIC interface.</Description>
     <Version>0.1.0</Version>
