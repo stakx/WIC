@@ -1,5 +1,4 @@
-﻿using stakx.WIC.Interop;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
@@ -62,7 +61,6 @@ namespace stakx.WIC
         }
 
         private static Dictionary<VARTYPE, Func<PROPVARIANT, object>> decoders;
-        private static Dictionary<Tuple<RuntimeTypeHandle, VARTYPE>, Action<PROPVARIANT>> encoders;
         private static Dictionary<VARTYPE, Action<PROPVARIANT>> disposers;
 
         public static bool TryDecode<T>(ref PROPVARIANT variant, out T value)
@@ -70,7 +68,6 @@ namespace stakx.WIC
             const VARTYPE flagMask = VARTYPE.VT_ARRAY | VARTYPE.VT_VECTOR | VARTYPE.VT_BYREF;
             bool hasFlag = (variant.Type & flagMask) != (VARTYPE)0;
             Func<PROPVARIANT, object> decoder;
-            VARTYPE alt1, alt2;
             if (decoders.TryGetValue(variant.Type, out decoder)
                 || (hasFlag && decoders.TryGetValue(variant.Type & flagMask, out decoder)))
             {

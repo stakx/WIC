@@ -1,8 +1,8 @@
-using Marshal = System.Runtime.InteropServices.Marshal;
 using System;
 using System.ComponentModel;
 using System.IO;
-using stakx.WIC.Interop;
+
+using Marshal = System.Runtime.InteropServices.Marshal;
 
 namespace stakx.WIC
 {

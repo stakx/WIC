@@ -1,88 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D77F053-8DC1-4128-A447-CB0D67E686B4}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>stakx.WIC</RootNamespace>
-    <AssemblyName>stakx.WIC</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFrameworks>net40</TargetFrameworks>
+    <Authors>stakx</Authors>
+    <Company></Company>
+    <Copyright>Copyright © stakx 2016-2017</Copyright>
+    <PackageProjectUrl>https://github.com/stakx/stakx.WIC</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stakx/stakx.WIC.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/stakx/stakx.WIC/blob/develop/LICENSE</PackageLicenseUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageTags>Windows, imaging, image processing, Windows Imaging Component, COM interop</PackageTags>
+    <Product>stakx.WIC</Product>
+    <Description>A COM interop library for .NET that makes Windows Imaging Component (WIC) available to managed code, including a thin layer of abstractions and extension methods to make it easier to work with the raw WIC interface.</Description>
+    <Version>0.1.0</Version>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Constants\ContainerFormat.cs" />
-    <Compile Include="Constants\HResult.cs" />
-    <Compile Include="Constants\Vendor.cs" />
-    <Compile Include="Extensions\IEnumStringExtensions.cs" />
-    <Compile Include="Extensions\IEnumUnknownExtensions.cs" />
-    <Compile Include="Extensions\IStreamExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapCodecInfoExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapDecoderExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapDecoderInfoExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapEncoderExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapFrameDecodeExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapFrameEncodeExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapLockExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapScalerExtensions.cs" />
-    <Compile Include="Extensions\IWICBitmapSourceExtensions.cs" />
-    <Compile Include="Extensions\IWICColorContextExtensions.cs" />
-    <Compile Include="Extensions\IWICComponentInfoExtensions.cs" />
-    <Compile Include="Extensions\IWICFormatConverterInfoExtensions.cs" />
-    <Compile Include="Extensions\IWICImagingFactoryExtensions.cs" />
-    <Compile Include="Extensions\IWICMetadataHandlerInfoExtensions.cs" />
-    <Compile Include="Extensions\IWICMetadataQueryReaderExtensions.cs" />
-    <Compile Include="Extensions\IWICPaletteExtensions.cs" />
-    <Compile Include="Extensions\StreamExtensions.cs" />
-    <Compile Include="FetchIntoBufferMethod.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CoTaskMemPtr.cs" />
-    <Compile Include="PropVariantHelpers.cs" />
-    <Compile Include="Structures\Resolution.cs" />
-    <Compile Include="Structures\Size.cs" />
-    <Compile Include="Structures\WICBitmapPattern.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\stakx.WIC.Interop\stakx.WIC.Interop.csproj">
-      <Project>{4ba81f6a-1d58-4c96-b603-8603324ac11c}</Project>
-      <Name>stakx.WIC.Interop</Name>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

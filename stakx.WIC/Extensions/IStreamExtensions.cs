@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using Marshal = System.Runtime.InteropServices.Marshal;
 
-namespace stakx.WIC.Interop
+namespace stakx.WIC
 {
     [EditorBrowsable(EditorBrowsableState.Advanced)]
     public static class IStreamExtensions

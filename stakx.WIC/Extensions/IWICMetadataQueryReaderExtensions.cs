@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using static stakx.WIC.PropVariantHelpers;
 
-namespace stakx.WIC.Interop
+namespace stakx.WIC
 {
     [EditorBrowsable(EditorBrowsableState.Advanced)]
     public static class IWICMetadataQueryReaderExtensions
