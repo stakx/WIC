@@ -43,19 +43,16 @@ And this is exactly what this project offers: a set of type definitions so that 
 
  1. Familiarize yourself with the WIC, if you don't know it yet.
     See e.g. the [Windows Imaging Component documentation on MSDN][msdn].
- 
- 2. Compile this project, then add a reference to the `stakx.WIC.Interop` assembly to your project.
-    This one contains the actual COM interop type definitions.
-    Note that these interop types can be embedded into the referencing assembly, so don't be surprised if you won't find the assembly in your program's output directory.
- 
- 3. If you want some additional convenience, att a reference to the `stakx.WIC` assembly to your project.
-    This assembly isn't strictly required, but it contains a set of extension methods that make the WIC API feel a little bit more like a .NET API.
-    These extension methods also often provide safe defaults for many methods' parameters.
- 
+
+ 2. Add the [NuGet package `stakx.WIC`][nuget-package] to your project.
+    Alternatively, you can compile this project yourself (you will need Visual Studio 2017 for this), and then
+    add a reference to the built `stakx.WIC.dll` assembly to your project.
+
  3. In your code, start by instantiating a `WICImagingFactory` object.
     Most other WIC components can be created directly or indirectly through this factory object.
     
  [msdn]: https://msdn.microsoft.com/en-us/library/windows/desktop/ee719902.aspx
+ [nuget-package]: https://www.nuget.org/packages/stakx.WIC/
 
 ## Is there any example code?
 
