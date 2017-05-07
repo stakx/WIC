@@ -1,124 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BA81F6A-1D58-4C96-B603-8603324AC11C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>stakx.WIC.Interop</RootNamespace>
-    <AssemblyName>stakx.WIC.Interop</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFrameworks>net40</TargetFrameworks>
+    <Authors>stakx</Authors>
+    <Company></Company>
+    <Copyright>Copyright © stakx 2016-2017</Copyright>
+    <PackageProjectUrl>https://github.com/stakx/stakx.WIC</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stakx/stakx.WIC.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/stakx/stakx.WIC/blob/develop/LICENSE</PackageLicenseUrl>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageTags>Windows, imaging, image processing, Windows Imaging Component, COM interop</PackageTags>
+    <Product>stakx.WIC</Product>
+    <Description>A COM interop library for .NET that makes Windows Imaging Component (WIC) available to managed code.</Description>
+    <Version>0.1.0</Version>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Classes\CLSID.cs" />
-    <Compile Include="Classes\WICImagingFactory.cs" />
-    <Compile Include="Enumerations\ExifColorSpace.cs" />
-    <Compile Include="Enumerations\LOCKTYPE.cs" />
-    <Compile Include="Enumerations\STGC.cs" />
-    <Compile Include="Enumerations\STGM.cs" />
-    <Compile Include="Enumerations\STGTY.cs" />
-    <Compile Include="Enumerations\StreamAccessMode.cs" />
-    <Compile Include="Enumerations\STREAM_SEEK.cs" />
-    <Compile Include="Enumerations\WICBitmapAlphaChannelOption.cs" />
-    <Compile Include="Enumerations\WICBitmapCreateCacheOption.cs" />
-    <Compile Include="Enumerations\WICBitmapDecoderCapabilities.cs" />
-    <Compile Include="Enumerations\WICBitmapDitherType.cs" />
-    <Compile Include="Enumerations\WICBitmapInterpolationMode.cs" />
-    <Compile Include="Enumerations\WICBitmapLockFlags.cs" />
-    <Compile Include="Enumerations\WICBitmapPaletteType.cs" />
-    <Compile Include="Enumerations\WICBitmapTransformOptions.cs" />
-    <Compile Include="Enumerations\WICColorContextType.cs" />
-    <Compile Include="Enumerations\WICComponentEnumerateOptions.cs" />
-    <Compile Include="Enumerations\WICComponentSigning.cs" />
-    <Compile Include="Enumerations\WICComponentType.cs" />
-    <Compile Include="Enumerations\WICDecodeOptions.cs" />
-    <Compile Include="Enumerations\WICMetadataCreationOptions.cs" />
-    <Compile Include="Enumerations\MetadataCreationAndPersistOptions.cs" />
-    <Compile Include="Interfaces\IEnumString.cs" />
-    <Compile Include="Interfaces\IEnumUnknown.cs" />
-    <Compile Include="Interfaces\IErrorLog.cs" />
-    <Compile Include="Interfaces\IID.cs" />
-    <Compile Include="Interfaces\IPropertyBag2.cs" />
-    <Compile Include="Interfaces\ISequentialStream.cs" />
-    <Compile Include="Interfaces\IStream.cs" />
-    <Compile Include="Interfaces\IWICBitmap.cs" />
-    <Compile Include="Interfaces\IWICBitmapCodecInfo.cs" />
-    <Compile Include="Interfaces\IWICBitmapDecoder.cs" />
-    <Compile Include="Interfaces\IWICBitmapDecoderInfo.cs" />
-    <Compile Include="Interfaces\IWICBitmapEncoder.cs" />
-    <Compile Include="Interfaces\IWICBitmapEncoderInfo.cs" />
-    <Compile Include="Interfaces\IWICBitmapClipper.cs" />
-    <Compile Include="Interfaces\IWICBitmapFlipRotator.cs" />
-    <Compile Include="Interfaces\IWICBitmapFrameDecode.cs" />
-    <Compile Include="Interfaces\IWICBitmapFrameEncode.cs" />
-    <Compile Include="Interfaces\IWICBitmapLock.cs" />
-    <Compile Include="Interfaces\IWICBitmapScaler.cs" />
-    <Compile Include="Interfaces\IWICBitmapSource.cs" />
-    <Compile Include="Interfaces\IWICColorContext.cs" />
-    <Compile Include="Interfaces\IWICColorTransform.cs" />
-    <Compile Include="Interfaces\IWICComponentFactory.cs" />
-    <Compile Include="Interfaces\IWICComponentInfo.cs" />
-    <Compile Include="Interfaces\IWICEnumMetadataItem.cs" />
-    <Compile Include="Interfaces\IWICFastMetadataEncoder.cs" />
-    <Compile Include="Interfaces\IWICFormatConverter.cs" />
-    <Compile Include="Interfaces\IWICFormatConverterInfo.cs" />
-    <Compile Include="Interfaces\IWICImagingFactory.cs" />
-    <Compile Include="Interfaces\IWICMetadataBlockReader.cs" />
-    <Compile Include="Interfaces\IWICMetadataBlockWriter.cs" />
-    <Compile Include="Interfaces\IWICMetadataHandlerInfo.cs" />
-    <Compile Include="Interfaces\IWICMetadataQueryReader.cs" />
-    <Compile Include="Interfaces\IWICMetadataQueryWriter.cs" />
-    <Compile Include="Interfaces\IWICMetadataReader.cs" />
-    <Compile Include="Interfaces\IWICMetadataWriter.cs" />
-    <Compile Include="Interfaces\IWICPalette.cs" />
-    <Compile Include="Interfaces\IWICStream.cs" />
-    <Compile Include="Enumerations\STATFLAG.cs" />
-    <Compile Include="Enumerations\WICBitmapEncoderCacheOption.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Structures\PROPBAG2.cs" />
-    <Compile Include="Structures\PROPVARIANT.cs" />
-    <Compile Include="Structures\STATSTG.cs" />
-    <Compile Include="Structures\VARTYPE.cs" />
-    <Compile Include="Structures\WICRect.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
