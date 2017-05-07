@@ -1,4 +1,4 @@
-﻿namespace stakx.WIC.Interop
+﻿namespace stakx.WIC
 {
     public struct Size
     {

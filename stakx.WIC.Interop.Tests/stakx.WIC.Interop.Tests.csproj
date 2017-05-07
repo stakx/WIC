@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\stakx.WIC.Interop\stakx.WIC.Interop.csproj" />
     <ProjectReference Include="..\stakx.WIC\stakx.WIC.csproj" />
   </ItemGroup>
 

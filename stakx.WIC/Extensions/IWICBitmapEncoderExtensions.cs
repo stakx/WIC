@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace stakx.WIC.Interop
+namespace stakx.WIC
 {
     [EditorBrowsable(EditorBrowsableState.Advanced)]
     public static class IWICBitmapEncoderExtensions

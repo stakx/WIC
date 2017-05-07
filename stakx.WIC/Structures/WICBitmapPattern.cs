@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace stakx.WIC.Interop
+namespace stakx.WIC
 {
     public sealed class WICBitmapPattern
     {

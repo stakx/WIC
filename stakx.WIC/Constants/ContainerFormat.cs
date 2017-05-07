@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace stakx.WIC.Interop
+namespace stakx.WIC
 {
     public static class ContainerFormat
     {

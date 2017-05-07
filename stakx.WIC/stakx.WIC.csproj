@@ -13,12 +13,8 @@
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageTags>Windows, imaging, image processing, Windows Imaging Component, COM interop</PackageTags>
     <Product>stakx.WIC</Product>
-    <Description>Extension methods and abstractions that make it easier to work with the types defined in `stakx.WIC.Interop`.</Description>
+    <Description>A COM interop library for .NET that makes Windows Imaging Component (WIC) available to managed code, including a thin layer of abstractions and extension methods to make it easier to work with the raw WIC interface.</Description>
     <Version>0.1.0</Version>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\stakx.WIC.Interop\stakx.WIC.Interop.csproj" />
-  </ItemGroup>
 
 </Project>
