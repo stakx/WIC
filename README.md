@@ -2,6 +2,8 @@
 
 A COM interop library for .NET that makes Windows Imaging Component (WIC) available to managed code.
 
+[![NuGet](https://img.shields.io/nuget/v/stakx.WIC.svg?style=flat-square)](https://www.nuget.org/packages/stakx.WIC/)
+
 ## What is the Windows Imaging Component (WIC)?
 
 > _"The Windows Imaging Component (WIC) is a Component Object Model based imaging codec framework
