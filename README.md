@@ -1,4 +1,4 @@
-# stakx.WIC
+# WIC
 
 A COM interop library for .NET that makes Windows Imaging Component (WIC) available to managed code.
 
@@ -47,8 +47,7 @@ And this is exactly what this project offers: a set of type definitions so that 
     See e.g. the [Windows Imaging Component documentation on MSDN][msdn].
 
  2. Add the [NuGet package `stakx.WIC`][nuget-package] to your project.
-    Alternatively, you can compile this project yourself (you will need Visual Studio 2017 for this), and then
-    add a reference to the built `stakx.WIC.dll` assembly to your project.
+    Alternatively, you can compile this project yourself (you will need Visual Studio 2017 for this), and then add a reference to the built `WIC.dll` assembly to your project.
 
  3. In your code, start by instantiating a `WICImagingFactory` object.
     Most other WIC components can be created directly or indirectly through this factory object.
