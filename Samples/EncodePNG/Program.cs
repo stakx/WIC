@@ -41,11 +41,11 @@ namespace Sample
                 frame.Initialize(null);
 
                 // set pixel format
-                var format = WICPixelFormats.GUID_WICPixelFormat24bppBGR;
+                var format = WICPixelFormat.WICPixelFormat24bppBGR;
                 frame.SetPixelFormat(ref format);
 
                 // check if the pixel format was accepted
-                if (format != WICPixelFormats.GUID_WICPixelFormat24bppBGR)
+                if (format != WICPixelFormat.WICPixelFormat24bppBGR)
                 {
                     throw new ArgumentException("The requested pixel format was not accepted");
                 }
